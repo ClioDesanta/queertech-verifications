@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The QueerTech Verifications</title>
+    <meta name="description" content="Travel Without Fear. A human-led, physical safety-verification standard for hotels.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="scroll-locked">
+
+    <!-- Background Network Line for connectivity -->
+    <div class="network-line-bg">
+        <div class="network-pulse"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 0: THE ENTRY DOOR (Fixed Overlay)        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-entry" class="scene-entry-overlay">
+        <div class="door-line"></div>
+        <div class="door-panel door-panel--left"></div>
+        <div class="door-panel door-panel--right"></div>
+        <div class="entry-content">
+            <div class="entry-text">
+                <span class="eyebrow space-mono">PREPARED FOR REVIEW</span>
+                <h1 class="playfair">The QueerTech Verifications</h1>
+                <p class="inter entry-subtitle">Every rating is a promise. This is the story of who checks it.</p>
+                <button class="entry-btn space-mono" id="enter-btn">▶ CLICK TO OPEN</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 1: HERO TEXT                             -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-hero" class="scene scene--hero">
+        <video class="hero-bg-video" src="./videos/1 home screen video paly at start.mp4" autoplay loop muted playsinline preload="auto"></video>
+        <div class="hero-bg-overlay"></div>
+        <div class="scene__inner hero-inner">
+            <h2 class="playfair reveal-up hero-headline">The door locks from the inside.<br>Everything else is trust.</h2>
+            <p class="inter reveal-up hero-subtext">Every night, travelers hand that trust to a room they've never seen. This is why we started building a way to earn it back — scroll to see the case.</p>
+            <span class="scroll-cue space-mono reveal-up">↓ SCROLL TO EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 2: STORY MODE — THREE ARRIVALS           -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-stories" class="scene scene--stories">
+        <div class="scene__inner">
+            <span class="eyebrow space-mono reveal-up">STORY MODE — THREE ARRIVALS</span>
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">Three travelers. Three doors.<br>You decide if either felt safe.</h2>
+            </div>
+
+            <div class="story-tabs">
+                <button class="story-tab active space-mono" data-story="meera">MEERA</button>
+                <button class="story-tab space-mono" data-story="alex">ALEX</button>
+                <button class="story-tab space-mono" data-story="varun">VARUN</button>
+            </div>
+
+            <div class="story-viewer">
+                <button class="story-nav story-nav--prev" aria-label="Previous panel">&#8249;</button>
+                <div class="story-viewport">
+                    <div class="story-track active" data-track="meera">
+                        <div class="story-slide"><img src="./meera story/1.png" alt="Meera Panel 1" loading="eager"></div>
+                        <div class="story-slide"><img src="./meera story/2.png" alt="Meera Panel 2" loading="lazy"></div>
+                        <div class="story-slide"><img src="./meera story/3.png" alt="Meera Panel 3" loading="lazy"></div>
+                        <div class="story-slide"><img src="./meera story/4.png" alt="Meera Panel 4" loading="lazy"></div>
+                        <div class="story-slide"><img src="./meera story/5.png" alt="Meera Panel 5" loading="lazy"></div>
+                        <div class="story-slide"><img src="./meera story/6.png" alt="Meera Panel 6" loading="lazy"></div>
+                    </div>
+                    <div class="story-track" data-track="alex">
+                        <div class="story-slide"><img src="./alex story/1.png" alt="Alex Panel 1" loading="lazy"></div>
+                        <div class="story-slide"><img src="./alex story/2.png" alt="Alex Panel 2" loading="lazy"></div>
+                        <div class="story-slide"><img src="./alex story/3.png" alt="Alex Panel 3" loading="lazy"></div>
+                        <div class="story-slide"><img src="./alex story/4.png" alt="Alex Panel 4" loading="lazy"></div>
+                        <div class="story-slide"><img src="./alex story/5.png" alt="Alex Panel 5" loading="lazy"></div>
+                        <div class="story-slide"><img src="./alex story/6.png" alt="Alex Panel 6" loading="lazy"></div>
+                    </div>
+                    <div class="story-track" data-track="varun">
+                        <div class="story-slide"><img src="./varun story/1.png" alt="Varun Panel 1" loading="lazy"></div>
+                        <div class="story-slide"><img src="./varun story/2.png" alt="Varun Panel 2" loading="lazy"></div>
+                        <div class="story-slide"><img src="./varun story/3.png" alt="Varun Panel 3" loading="lazy"></div>
+                        <div class="story-slide"><img src="./varun story/4.png" alt="Varun Panel 4" loading="lazy"></div>
+                        <div class="story-slide"><img src="./varun story/5.png" alt="Varun Panel 5" loading="lazy"></div>
+                        <div class="story-slide"><img src="./varun story/6.png" alt="Varun Panel 6" loading="lazy"></div>
+                    </div>
+                </div>
+                <button class="story-nav story-nav--next" aria-label="Next panel">&#8250;</button>
+            </div>
+            <div class="story-counter space-mono"><span class="counter-current">1</span> / <span class="counter-total">6</span></div>
+
+            <!-- Story captions in dossier boxes -->
+            <div class="dossier-box story-caption-box active" data-caption="meera">
+                <p class="inter"><span class="space-mono caption-label">01 // MEERA.</span> Meera's booked eleven cities this year. She knows what a good room looks like. Five stars. Forty reviews. A lobby that smells expensive. She stops double-checking. Almost. The smoke detector sits half a centimetre off-true. Probably nothing. She unscrews it anyway. Finds nothing. Feels nothing like relief. 'Verified' was a word on a website. Tonight, it isn't a word she trusts.</p>
+            </div>
+            <div class="dossier-box story-caption-box" data-caption="alex">
+                <p class="inter"><span class="space-mono caption-label">02 // ALEX.</span> Alex booked a double. The confirmation said double. At the desk, the smile changes when it reaches their partner's hand in theirs. 'A twin's all we have tonight,' the manager says. The system shows six doubles free. No one raises their voice. No one has to. They keep the confirmation email open the whole stay — in case someone asks for proof they belong here.</p>
+            </div>
+            <div class="dossier-box story-caption-box" data-caption="varun">
+                <p class="inter"><span class="space-mono caption-label">03 // VARUN.</span> Varun picked this one for the badge on the listing: Safety Verified. Verified by whom, exactly? He didn't check. The badge did the checking for him. Midnight — the fire exit is a storage room. The extinguisher expired two winters ago. He calls the front desk. It rings out. He calls again. The badge is still on the listing the next morning. Nothing about it has changed. Neither has the extinguisher.</p>
+            </div>
+
+            <!-- Bridge text -->
+            <div class="dossier-box reveal-up bridge-box">
+                <p class="playfair bridge-text">Just like them. Not a hunch — a pattern, repeated across cities, happening to people who had far less room to be careful than they did.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 2.5: CONSUMER-HOTEL RELATIONSHIP         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-relationship" class="scene scene--relationship">
+        <div class="scene__inner">
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">The broken contract between travelers and the places they trust.</h2>
+                <p class="inter">On one side, the guest — paying for safety they cannot verify. On the other, the industry — selling trust it cannot prove. The gap between the two is where every story above lives.</p>
+            </div>
+            <div class="rel-grid">
+                <div class="rel-col rel-col--consumer reveal-up">
+                    <h3 class="space-mono rel-label">THE CONSUMER</h3>
+                    <div class="rel-img-wrap"><img src="./all images/problems of the world/detective mindset consumer img1.png" alt="Consumer in detective mode" loading="lazy"></div>
+                    <div class="rel-img-wrap"><img src="./all images/problems of the world/consumer feeling annoyed img2.png" alt="Consumer frustrated" loading="lazy"></div>
+                </div>
+                <div class="rel-line-container">
+                    <svg class="rel-line" viewBox="0 0 4 200" preserveAspectRatio="none">
+                        <line x1="2" y1="0" x2="2" y2="200" stroke="#C9A961" stroke-width="1" stroke-dasharray="4 4"/>
+                    </svg>
+                </div>
+                <div class="rel-col rel-col--hotel reveal-up">
+                    <h3 class="space-mono rel-label">THE INDUSTRY</h3>
+                    <div class="rel-img-wrap"><img src="./all images/problems of the world/hotel loosing trust due to failed systems img3.png" alt="Hotels losing trust" loading="lazy"></div>
+                    <div class="rel-img-wrap"><img src="./all images/Hero Background.png" alt="The hotel industry" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 3: THE SCALE (Interactive Globe)         -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-scale" class="scene scene--scale">
+        <div class="scene__inner">
+            <div class="dossier-box reveal-up" style="max-width: 600px; position: relative; z-index: 10;">
+                <span class="eyebrow space-mono">THE SIZE OF WHAT WE'RE STANDING IN</span>
+                <p class="inter">Travel &amp; tourism is forecast to move <strong>$12 trillion</strong> through the global economy this year alone. It is one of the largest economies in the world, and no part of that scale currently guarantees a guest is safe behind their own door.</p>
+                <p class="inter" style="margin-top: 1rem; opacity: 0.7;"><strong>Click the glowing nodes on the globe to reveal the impact.</strong></p>
+            </div>
+
+            <!-- Full-Screen Interactive Globe -->
+            <div class="interactive-globe-area">
+                <div class="globe-container">
+                    <svg class="globe" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="95" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+                        <ellipse cx="100" cy="100" rx="95" ry="40" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
+                        <ellipse cx="100" cy="100" rx="30" ry="95" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
+                        <ellipse cx="100" cy="100" rx="60" ry="95" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
+                        <ellipse cx="100" cy="100" rx="85" ry="95" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
+                        <ellipse cx="100" cy="100" rx="95" ry="70" stroke="currentColor" stroke-width="0.3" opacity="0.2"/>
+                        <ellipse cx="100" cy="100" rx="95" ry="15" stroke="currentColor" stroke-width="0.3" opacity="0.2"/>
+                    </svg>
+
+                    <!-- Interactive Nodes (Hotspots) -->
+                    <button class="globe-node" style="top: 20%; left: 30%;" data-card="0"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 40%; left: 75%;" data-card="1"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 70%; left: 25%;" data-card="2"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 60%; left: 80%;" data-card="3"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 15%; left: 65%;" data-card="4"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 80%; left: 50%;" data-card="5"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 35%; left: 10%;" data-card="6"><span class="pulse"></span></button>
+                    <button class="globe-node" style="top: 50%; left: 45%;" data-card="7"><span class="pulse"></span></button>
+                </div>
+
+                <!-- Floating Data Cards -->
+                <div class="floating-cards">
+                    <div class="scale-card" data-index="0">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (3).png" alt="$12 Trillion GDP" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="1">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (6).png" alt="67% LGBTQ+ discrimination" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="2">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (8).png" alt="71% women feel unsafe" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="3">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (7).png" alt="47% hidden cameras" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="4">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (2).png" alt="1.52 Billion tourists" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="5">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (4).png" alt="Data card" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="6">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data (5).png" alt="Data card" loading="lazy"></div></div>
+                    </div>
+                    <div class="scale-card" data-index="7">
+                        <div class="scale-card-inner"><div class="scale-card-back"><img src="./all images/data.png" alt="340% hidden camera searches" loading="lazy"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 4: WHAT EXISTS TODAY (Failed Solutions)   -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-illusion" class="scene scene--illusion">
+        <div class="scene__inner">
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">The industry isn't silent on safety.<br>It's just not looking closely enough.</h2>
+            </div>
+
+            <div class="illusion-cards">
+                <div class="illusion-card reveal-up">
+                    <div class="frame frame--wide"><img src="./all images/self tick badges.png" alt="Platform Badges" loading="lazy"></div>
+                    <div class="illusion-text">
+                        <h3 class="space-mono">SELF-ATTACHED BADGES</h3>
+                        <p class="inter">A property completes training, checks its own boxes, and receives a mark of inclusion. No one from outside ever walks the building.</p>
+                    </div>
+                </div>
+                <div class="illusion-card reveal-up">
+                    <div class="frame frame--wide"><img src="./all images/ratings.png" alt="After-The-Fact Reviews" loading="lazy"></div>
+                    <div class="illusion-text">
+                        <h3 class="space-mono">AFTER-THE-FACT REVIEWS</h3>
+                        <p class="inter">Honest, but retroactive. By the time a review warns you, someone already lived the warning.</p>
+                    </div>
+                </div>
+                <div class="illusion-card reveal-up">
+                    <div class="frame frame--wide"><img src="./all images/one tiem aduits that are aslo poor.png" alt="One-Time Audits" loading="lazy"></div>
+                    <div class="illusion-text">
+                        <h3 class="space-mono">ONE-TIME AUDITS</h3>
+                        <p class="inter">A single visit, a checklist ticked, and a certificate printed. No follow-up. No accountability. The certificate ages, but the sticker stays.</p>
+                    </div>
+                </div>
+                <div class="illusion-card reveal-up">
+                    <div class="frame frame--wide"><img src="./all images/failed traing programs.png" alt="Failed Training Programs" loading="lazy"></div>
+                    <div class="illusion-text">
+                        <h3 class="space-mono">FAILED TRAINING PROGRAMS</h3>
+                        <p class="inter">A projector in an empty room. A checkbox marked complete. The training happened — it just didn't change anything.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dossier-box reveal-up transition-box">
+                <p class="playfair transition-text">A badge is a promise. A promise isn't an inspection. None of this is malice. Most of it is good intentions without a mechanism. <strong>Trust needs a mechanism.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 5: MICHELIN STANDARD & OUR SOLUTION      -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-solution" class="scene scene--solution">
+        <div class="scene__inner">
+            <span class="eyebrow space-mono reveal-up">A STANDARD THAT ALREADY WORKS</span>
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">The restaurant industry solved a version of this a century ago.</h2>
+                <p class="inter">Michelin inspectors visit anonymously. No restaurant can buy a star, and none can self-report one. The QueerTech Verifications borrows that discipline and points it at human safety.</p>
+            </div>
+            <div class="frame frame--wide michelin-frame reveal-up">
+                <img src="./all images/this is michellen star.png" alt="The Michelin Standard" loading="lazy">
+            </div>
+
+            <!-- Solution Carousel — Click-driven -->
+            <h3 class="playfair carousel-title reveal-up">Our Verification Process</h3>
+            <div class="carousel-viewer">
+                <button class="carousel-nav carousel-nav--prev" aria-label="Previous">&#8249;</button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <!-- 1. Registration image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/it strat with registration img1.png" alt="Registration" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">01 // REGISTRATION.</span> A hotel registers and submits documentation — trade licence, fire-safety certificate, staff records — before any audit is even scheduled.</p></div>
+                        </div>
+                        <!-- 2. Solution Video 1 -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/2 video fisrt video for my soclutions tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">VERIFICATION IN ACTION</span></p></div>
+                        </div>
+                        <!-- 3. Document Check image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/checing of the fils img2.png" alt="Document Check" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">02 // DOCUMENT VERIFICATION.</span> Documentation is verified, a fee is paid, and a visit is booked — the property doesn't get to pick who shows up.</p></div>
+                        </div>
+                        <!-- 4. Solution Video 2 (Registration video) -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/The Registration 2nd video for my solutions tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">THE REGISTRATION PROCESS</span></p></div>
+                        </div>
+                        <!-- 5. Scheduling image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/scheduling the audit img3.png" alt="Scheduling" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">03 // THE SCHEDULE.</span> A visit is booked. The auditor arrives as a guest — unannounced, unrehearsed, the way any traveler would.</p></div>
+                        </div>
+                        <!-- 6. Protocol image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/autior following the protocol img3.png" alt="Protocol" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">04 // THE PROTOCOL.</span> The same structured checklist, every property, every city — staff conduct, door locks, lighting, fire exits. No shortcuts, no self-grading.</p></div>
+                        </div>
+                        <!-- 7. Solution Video 3 -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/4 (3rd) video for my solutions tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">THE AUDIT IN PROGRESS</span></p></div>
+                        </div>
+                        <!-- 8. Sweep image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/auditor doinc full sweetp to find hiddenc ameras img4.png" alt="The Sweep" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">05 // THE SWEEP.</span> A dedicated, technical search for hidden recording devices — optical, radio-frequency, and non-linear-junction detection — the one check no guest can do for themselves.</p></div>
+                        </div>
+                        <!-- 9. Solution Video 4 -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/5 foruth video for my solutiosn tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">HIDDEN CAMERA DETECTION</span></p></div>
+                        </div>
+                        <!-- 10. Certified / The Mark -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/passed hotels get certified img5.png" alt="Certified" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">06 // THE MARK.</span> A property earns the mark. It doesn't apply for one, complete a course, and print it out. The brass seal is geo-tagged, time-stamped, and verified live.</p></div>
+                        </div>
+                        <!-- 11. Solution Video 5 -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/6 fifth video for my solutiosn tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">CERTIFICATION AWARDED</span></p></div>
+                        </div>
+                        <!-- 12. Re-Audit image -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><img src="./all images/our soulutions images/faield hotels get a chaneg to reaudit img6.png" alt="Re-Audit" loading="lazy"></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">07 // THE RE-AUDIT.</span> Verified isn't forever. Certification runs six months and is revoked the same day a confirmed complaint comes in — because trust that's never tested stops meaning anything.</p></div>
+                        </div>
+                        <!-- 13. Solution Video 6 -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/7 sisxth video for my soclutiosn tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">THE COMPLETE JOURNEY</span></p></div>
+                        </div>
+                        <!-- 14. Solution Video 7 (LAST) -->
+                        <div class="carousel-slide">
+                            <div class="frame frame--wide"><video src="./videos/8 seventh video for my solutiosn tab.mp4" autoplay loop muted playsinline preload="auto"></video></div>
+                            <div class="dossier-box slide-caption"><p class="inter"><span class="space-mono caption-label">THE ARRIVAL.</span> A traveler steps into a room they've never seen, drops their bags, and simply exhales. The detective work is over.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-nav--next" aria-label="Next">&#8250;</button>
+            </div>
+            <div class="carousel-counter space-mono"><span class="carousel-current">1</span> / <span class="carousel-total">14</span></div>
+
+            <!-- Relief sequence -->
+            <div class="relief-grid reveal-up">
+                <div class="frame frame--wide"><img src="./all images/problems of the world/cosumer can realx withou worry img4.png" alt="Consumer can relax" loading="lazy"></div>
+                <div class="frame frame--wide"><img src="./all images/problems of the world/consumer can look at the hotels that are queer tech certified to dont have to do detctive work img4.png" alt="No more detective work" loading="lazy"></div>
+                <div class="frame frame--wide"><img src="./all images/problems of the world/badge helping hotels get bussines img5.png" alt="Hotels gain business" loading="lazy"></div>
+                <div class="frame frame--wide"><img src="./all images/problems of the world/a world wherre everyton can travel witohu fear img6.png" alt="Travel without fear" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 6: WHY WE STARTED                        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-origin" class="scene scene--origin">
+        <div class="scene__inner">
+            <span class="eyebrow space-mono reveal-up">WHY WE STARTED</span>
+            <div class="dossier-box reveal-up">
+                <p class="playfair body-heavy">We were traveling for work, not looking for a cause. Somewhere between a booking confirmation and a door that didn't feel the way the listing promised, the question stopped being hypothetical. If it could happen to us — prepared, careful, paying attention — it was already happening, quietly, to people with far less room to be careful than we had.</p>
+                <p class="playfair body-heavy">We went looking for the number. Not a hunch — the actual number. What we found was worse than one bad night: a pattern, repeated across cities, hiding in plain sight behind five-star ratings and inclusion badges nobody had ever walked in to check. So we didn't write a complaint. We built a checklist. QueerTech exists because a promise without an inspection is just a nicer word for a guess — and travelers deserve better than a guess.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 7: OUR JOURNEY                           -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-journey" class="scene scene--journey">
+        <div class="scene__inner">
+            <span class="eyebrow space-mono reveal-up">WHERE WE ARE</span>
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">Built by looking, not guessing.</h2>
+            </div>
+            <ul class="journey-list">
+                <li class="journey-item reveal-up">
+                    <span class="journey-check journey-check--done">✓</span>
+                    <div><strong class="playfair">Research</strong><p class="inter">The problem mapped through direct conversations with travelers.</p></div>
+                </li>
+                <li class="journey-item reveal-up">
+                    <span class="journey-check journey-check--done">✓</span>
+                    <div><strong class="playfair">Podcast Launched</strong><p class="inter">These stories carried past the industry and into the open.</p></div>
+                </li>
+                <li class="journey-item reveal-up">
+                    <span class="journey-check journey-check--done">✓</span>
+                    <div><strong class="playfair">Prototype Built</strong><p class="inter">The full verification journey, registration to certificate, built and working.</p></div>
+                </li>
+                <li class="journey-item reveal-up">
+                    <span class="journey-check journey-check--pending">○</span>
+                    <div><strong class="playfair">Funding</strong><p class="inter">The next step. Not the point. The fuel.</p></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 8: THE DHARMA OF SAFETY                  -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-dharma" class="scene scene--dharma">
+        <div class="scene__inner">
+            <div class="dossier-box reveal-up dharma-box">
+                <h2 class="playfair">THE DHARMA OF SAFETY</h2>
+                <p class="playfair body-heavy">Building this mattered because a door that lies to you is a small harm that repeats, silently, at scale — and most of what protects people isn't grand. It's someone who checked. A life is a short arrangement of ordinary rooms: the ones we slept in, the ones we trusted, the ones we didn't have to think about twice. That's the whole ambition here. Not a platform. Fewer rooms people have to think twice about.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 9: WHAT KIND OF PEOPLE WE NEED           -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-call" class="scene scene--call">
+        <div class="scene__inner">
+            <div class="dossier-box reveal-up">
+                <h2 class="playfair">We don't need people who see the money.<br>We need people who saw the problem before we said a word.</h2>
+                <p class="inter">Building the checklist was the easy part. What we're looking for now isn't capital first — it's people who measure impact the way we do: in doors that finally deserve the trust placed in them. If that's a fund, good. If that's you, better.</p>
+            </div>
+
+            <div class="call-traits">
+                <div class="call-trait reveal-up">
+                    <h3 class="space-mono">THE CURIOUS</h3>
+                    <p class="inter">People who investigate what everyone else simply accepts.</p>
+                </div>
+                <div class="call-trait reveal-up">
+                    <h3 class="space-mono">THE BUILDER</h3>
+                    <p class="inter">People who can forge uncomfortable questions into unshakeable systems.</p>
+                </div>
+                <div class="call-trait reveal-up">
+                    <h3 class="space-mono">THE EMPATH</h3>
+                    <p class="inter">People who never forget that every market statistic is, ultimately, someone's life.</p>
+                </div>
+                <div class="call-trait reveal-up">
+                    <h3 class="space-mono">THE RELENTLESS</h3>
+                    <p class="inter">People who continue pressing forward long after the obvious path closes.</p>
+                </div>
+            </div>
+
+            <div class="dossier-box reveal-up motto-box">
+                <p class="playfair motto">TRAVEL WITHOUT FEAR.</p>
+                <p class="inter">The standard begins with one property. The idea begins with one question. The impact begins with people who refuse to look away.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 10: FOOTER                               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer id="scene-footer" class="scene scene--footer">
+        <div class="scene__inner">
+            <div class="footer-contact inter">
+                <span>LinkedIn: https://www.linkedin.com/in/the-queertech-436938375</span>
+                <span>Email: adiup398@gmail.com</span>
+            </div>
+            <p class="inter footer-note">A note, before you go: this page was built for an incubator application, not as our live product. Our product is what happens when a trained person walks through a door most guests never get to check first. This is just the reason that walk matters.</p>
+        </div>
+    </footer>
+
+    <!-- CDN Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
