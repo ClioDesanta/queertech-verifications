@@ -4,39 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The QueerTech Verifications</title>
-    
-    <!-- Google Fonts: Playfair Display (Serif), Inter (Sans), Space Mono (Monospace) -->
+    <meta name="description" content="Travel Without Fear. A human-led, physical safety-verification standard for hotels.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Preload hero video for instant playback -->
+    <link rel="preload" href="./videos/1 home screen video paly at start.mp4" as="video" type="video/mp4">
 </head>
-<body>
+<body class="scroll-locked">
 
-    <!-- SECTION 1: ENTRY SCREEN -->
-    <section id="scene-entry" class="scene scene--entry">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto">
-            <source src="./videos/1 home screen video paly at start.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
+    <!-- Background Network Line for connectivity -->
+    <div class="network-line-bg">
+        <div class="network-pulse"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 0: THE ENTRY DOOR (Fixed Overlay)        -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-entry" class="scene-entry-overlay">
         <div class="door-line"></div>
         <div class="door-panel door-panel--left"></div>
         <div class="door-panel door-panel--right"></div>
-        
         <div class="entry-content">
-            <div class="hero-text">
+            <div class="entry-text">
                 <span class="eyebrow space-mono">PREPARED FOR REVIEW</span>
                 <h1 class="playfair">The QueerTech Verifications</h1>
-                <p class="inter">Every rating is a promise. This is the story of who checks it.</p>
-                <div class="entry-trigger space-mono">▶ CLICK TO OPEN</div>
+                <p class="inter entry-subtitle">Every rating is a promise. This is the story of who checks it.</p>
+                <button class="entry-btn space-mono" id="enter-btn">▶ CLICK TO OPEN</button>
             </div>
-            
-            <div class="hero-text hero-text--reveal hidden">
-                <h1 class="playfair">The door locks from the inside.<br>Everything else is trust.</h1>
-                <p class="inter">Every night, travelers hand that trust to a room they've never seen. This is why we started building a way to earn it back — scroll to see the case.</p>
-                <div class="scroll-cue space-mono">↓ SCROLL TO EXPLORE</div>
-            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SCENE 1: HERO TEXT                             -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section id="scene-hero" class="scene scene--hero">
+        <video class="hero-bg-video" src="./videos/1 home screen video paly at start.mp4" autoplay loop muted playsinline preload="auto"></video>
+        <div class="hero-bg-overlay"></div>
+        <div class="scene__inner hero-inner">
+            <h2 class="playfair reveal-up hero-headline">The door locks from the inside.<br>Everything else is trust.</h2>
+            <p class="inter reveal-up hero-subtext">Every night, travelers hand that trust to a room they've never seen. This is why we started building a way to earn it back — scroll to see the case.</p>
+            <span class="scroll-cue space-mono reveal-up">↓ SCROLL TO EXPLORE</span>
         </div>
     </section>
 
