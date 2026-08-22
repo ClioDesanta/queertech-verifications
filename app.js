@@ -275,19 +275,32 @@ gsap.utils.toArray('.journey-item').forEach((item, i) => {
     });
 });
 
-/* ─── 8. VIDEO AUTO-PLAY / PAUSE ─────────────────────────────── */
+/* ─── 8. VIDEO LAZY-LOAD & AUTO-PLAY / PAUSE ─────────────────── */
 
 document.querySelectorAll('video').forEach(video => {
-    video.play().catch(() => {});
+    const isHero = video.classList.contains('hero-bg-video');
+    
+    // Hero video plays immediately, others lazy-load
+    if (isHero) {
+        video.play().catch(() => {});
+        return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.play().catch(() => {});
+                // Start loading when visible
+                if (video.preload === 'none') {
+                    video.preload = 'auto';
+                    video.load();
+                }
+                video.loop = true;
+                video.play().catch(() => {});
             } else {
-                entry.target.pause();
+                video.pause();
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.2, rootMargin: '200px' });
     observer.observe(video);
 });
 
