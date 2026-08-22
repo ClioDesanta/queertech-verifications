@@ -311,3 +311,18 @@ window.addEventListener('load', () => {
 });
 
 setTimeout(() => ScrollTrigger.refresh(), 1500);
+
+
+/* Draw Connector Line */
+if (document.querySelector('.draw-line')) {
+    gsap.to('.draw-line', {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".dossier-connector",
+            start: "top 70%",
+            end: "bottom 30%",
+            scrub: 1
+        }
+    });
+}
